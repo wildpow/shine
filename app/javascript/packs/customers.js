@@ -15,6 +15,7 @@ import { AddressComponent         } from
   "CustomerDetailsComponent/AddressComponent";
 import { CreditCardComponent       } from
   "CustomerDetailsComponent/CreditCardComponent";
+import { TextFieldComponent } from "TextFieldComponent";
 
 var RESULTS = [
   {
@@ -87,6 +88,7 @@ var RESULTS = [
         CustomerInfoComponent,
         AddressComponent,
         CreditCardComponent,
+        TextFieldComponent,
         AppComponent
       ],
       bootstrap:    [ AppComponent ]
