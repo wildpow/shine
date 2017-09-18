@@ -22,6 +22,7 @@
         <shine-text-field
           bind-object="address"
           field_name="state"
+          compact="true"
           label="State">
         </shine-text-field>
       </div>
@@ -29,7 +30,8 @@
         <shine-text-field
           bind-object="address"
           field_name="zipcode"
-          label="Zip">
+          pattern="\d\d\d\d\d(-\d\d\d\d)?"
+          label="Zip Code">
         </shine-text-field>
       </div>
     </div>

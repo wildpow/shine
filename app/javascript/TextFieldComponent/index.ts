@@ -8,6 +8,8 @@ var TextFieldComponent = Component({
     "object",
     "field_name",
     "label",
+    "pattern",
+    "compact",
     "addon"
   ]
 }).Class({
@@ -16,6 +18,8 @@ var TextFieldComponent = Component({
       this.object     = null;
       this.field_name = null;
       this.label      = null;
+      this.pattern    = null;
+      this.compact    = null;
       this.addon      = null;
     }
   ]

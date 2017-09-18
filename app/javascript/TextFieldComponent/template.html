@@ -6,13 +6,21 @@
   </label>
   <div bind-class="addon ? 'input-group' : ''">
     <div *ngIf="addon" class="input-group-addon">{{addon}}</div>
-    <input type="text" class="form-control" attr.name="{{field_name}}"
+    <input type="text"
+           bind-class="( compact && model.invalid && model.dirty ) ?
+                          'form-control alert-danger' :
+                          'form-control'"
+           attr.name="{{field_name}}"
            required
+           bind-pattern="pattern ? pattern : '^.*$'"
            bindon-ngModel="object[field_name]"
            ref-model="ngModel">
   </div>
-  <aside  *ngIf="model.invalid && model.dirty"
+  <aside  *ngIf="!compact && model.invalid && model.dirty"
           class="alert alert-danger">
-          <small>This is required</small>
+          <small>
+            <span *ngIf="pattern">This is not a {{label}}</span>
+            <span *ngIf="!pattern">This is required</span>
+          </small>
   </aside>
 </div>
