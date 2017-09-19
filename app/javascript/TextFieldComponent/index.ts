@@ -22,6 +22,17 @@ var TextFieldComponent = Component({
       this.compact    = null;
       this.addon      = null;
     }
-  ]
+  ],
+  modelValid: function(model) {
+    return !(model.invalid && model.dirty);
+  },
+  validationPattern: function() {
+    if (this.pattern) {
+      return this.pattern;
+    }
+    else {
+      return "^.*$";
+    }
+  },
 });
 export { TextFieldComponent };
