@@ -26,6 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'faker'
+gem 'angular_rails_csrf'
 gem 'foreman', '~> 0.84'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
