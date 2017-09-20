@@ -2,6 +2,12 @@ class CustomersController < ApplicationController
 
   PAGE_SIZE = 10
 
+  def update
+    customer_detail = CustomerDetail.find(params[:id])
+    customer_detail.update(params)
+    head :ok
+  end
+
   def ng
     @base_url = "/customers/ng"
     render :index
