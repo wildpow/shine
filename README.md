@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Shine is the example Rails application built using the book: Rails, Angular,
+Postgress, and Bootstrap Second Edition.
 
-Things you may want to cover:
+App uses:
 
-* Ruby version
+* Ruby version 2.4.2
+* Rails 5.1.4
+* Yarn 1.0.2
+* Webpack 3.6
+* Postgress 9.6
+* Angular 4.4.2
+* Test suite: Rpec, Phantomjs, Karma, Jasmine, Poltergeist
 
-* System dependencies
+* Deployment instructions:
+Make sure you have Postgress DB, Yarn, Ruby, and the Rails installed.
 
-* Configuration
+Setting up app:
 
-* Database creation
+Terminal commands:
+1. bundle install
+2. yarn install
+3. rails db:create
+4. rails db:migrate
+5. rails db:seed (will take a while)
+6. foreman start
 
-* Database initialization
+Go to localhost:5000 and click sign up. User name has to end in '@example.com'
+and password must be 10 characters long. Once logged in you must type in 'localhost:5000/customers' to see the customer search in action.
 
-* How to run the test suite
+testing commands:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails spec
+rake karma (Phantomjs needs to be installed)
